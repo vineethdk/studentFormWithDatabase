@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" href="css/afterSubmit.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+</head>
+
+<body>
+  <h1>THANK YOU FOR SUBMISSION TAKE CARE!!</h1>
+  <div class="box">
+    <% newStudents.forEach(function(item){ %>
+      <form class="" action="/delete" method="post">
+        <div class="card">
+          <div class="container" >
+            <p><%=  item.firstName  %></p>
+            <p><%=  item.lastName  %></p>
+            <p><%=  item.userName  %></p>
+            <p><%=  item.email  %></p>
+            <button type="submit"  name="cb" value = "<%= item._id %>"><i class="fas fa-trash-alt"></i></button>
+          </div>
+        </div>
+      </form>
+
+    <% }) %>
+  </div>
+
+</body>
+
+</html>
